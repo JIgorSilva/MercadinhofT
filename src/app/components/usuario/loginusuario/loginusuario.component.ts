@@ -1,0 +1,39 @@
+import { Component, inject } from '@angular/core';
+import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../../../services/auth.services';
+import { HttpResponse } from '@angular/common/http';
+
+@Component({
+  selector: 'app-loginusuario',
+  standalone: true,
+  imports: [MdbFormsModule, FormsModule],
+  templateUrl:'./loginusuario.component.html',
+  styleUrls: ['./loginusuario.component.scss']
+})
+export class LoginusuarioComponent {
+  email!: string
+  senha!: string
+  authService = inject(AuthService); 
+  router = inject(Router);
+
+
+  loginUsuarioDto() {
+    this.authService.login(this.email, this.senha).subscribe({
+      next: (response) => {
+        console.log('Resposta da API:', response);
+        alert('Login bem-sucedido! ' + response);
+        this.router.navigate(['menu']);
+      },
+      error: (error) => {
+        console.error('Erro no login:', error);
+        if (typeof error.error === 'string') {
+          const errorObj = JSON.parse(error.error);
+          let errorMessage = errorObj.message || 'Erro desconhecido';
+          alert('Erro: ' + (JSON.stringify(errorMessage)));
+        }
+      }      
+    });
+  }
+}
