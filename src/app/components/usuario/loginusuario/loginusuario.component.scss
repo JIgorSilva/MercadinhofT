@@ -1,0 +1,44 @@
+
+.fundo {
+    background-color: #fadfdf;
+}
+
+.logo-icon {
+    color: #3ac091;
+}
+
+.img-container {
+    object-fit: cover;
+    object-position: left;
+    width: 100%;
+    height: 100vh;
+}
+
+@media (min-width: 1025px) {
+    .h-custom-2 {
+        height: 100%;
+    }
+}
+
+.form-outline input {
+    border: 1px solid #585151; 
+    border-radius: 5px;
+    padding: 8px;
+    outline: none;
+}
+
+.form-outline label {
+    transform: translateY(-10px);
+    font-size: 0.9rem;
+    background: #fadfdf;
+    padding: 0 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
