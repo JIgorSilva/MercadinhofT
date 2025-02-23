@@ -8,8 +8,11 @@
 
 # Node
 /node_modules
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
 
 # IDEs and editors
 .idea/
@@ -36,6 +39,16 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+
+# Cypress (caso use para testes e2e)
+cypress/videos/
+cypress/screenshots/
+
+# Arquivos de ambiente (caso use dotenv)
+.env
+.env.local
+.env.development
+.env.production
 
 # System files
 .DS_Store
