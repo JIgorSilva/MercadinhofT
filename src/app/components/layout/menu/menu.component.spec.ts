@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MenuComponent } from './menu.component';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
@@ -8,9 +9,8 @@ describe('MenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuComponent]
-    })
-    .compileComponents();
+      imports: [MenuComponent, MdbCarouselModule, MdbCollapseModule], // Importe os módulos necessários
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MenuComponent);
     component = fixture.componentInstance;

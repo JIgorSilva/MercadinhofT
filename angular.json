@@ -35,6 +35,10 @@
               "src/styles.scss"
             ],
             "scripts": [
+<<<<<<< HEAD
+=======
+              "node_modules/chart.js/dist/chart.js",
+>>>>>>> feat-criação-rotas-editlayout-front-02
               "node_modules/chart.js/dist/chart.js"
             ]
           },

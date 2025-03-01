@@ -1,26 +1,27 @@
-<p>menu works!</p>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <ul class="navbar-nav">
-            <!-- Avatar -->
-            <li mdbDropdown class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink"
-                    role="button" mdbDropdownToggle aria-expanded="false">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).webp" class="rounded-circle"
-                        height="22" alt="" loading="lazy" />
-                </a>
-                <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <a class="dropdown-item" href="/pro">My profile</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Settings</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</nav>
+<div class="container-fluid">
+  <!-- Nav horizontal -->
+  <ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/menu" routerLinkActive="active">Menu</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/menu/perfilusuario" routerLinkActive="active">Perfil</a>
+    </li>
+  </ul>
+
+  <!-- Carrossel -->
+  <mdb-carousel [controls]="true" class="custom-carousel">
+    <mdb-carousel-item [interval]="10000">
+      <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="d-block w-100" alt="..." />
+    </mdb-carousel-item>
+    <mdb-carousel-item [interval]="2000">
+      <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="d-block w-100" alt="..." />
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <img src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp" class="d-block w-100" alt="..." />
+    </mdb-carousel-item>
+  </mdb-carousel>
+
+  <!-- Conteúdo das rotas será carregado aqui -->
+  <router-outlet></router-outlet>
+</div>

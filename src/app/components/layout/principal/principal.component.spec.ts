@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PrincipalComponent } from './principal.component';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 
 describe('PrincipalComponent', () => {
   let component: PrincipalComponent;
@@ -8,9 +8,8 @@ describe('PrincipalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PrincipalComponent]
-    })
-    .compileComponents();
+      imports: [PrincipalComponent, MdbCarouselModule,],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PrincipalComponent);
     component = fixture.componentInstance;
