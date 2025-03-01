@@ -4,10 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../services/auth.services';
 import { HttpResponse } from '@angular/common/http';
-<<<<<<< HEAD
-=======
 import Swal from 'sweetalert2';
->>>>>>> feat-criação-rotas-editlayout-front-02
 
 @Component({
   selector: 'app-loginusuario',
