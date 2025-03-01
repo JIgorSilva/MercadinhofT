@@ -5,7 +5,7 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [MdbCarouselModule,RouterModule], // Remova o PerfilusuarioComponent daqui
+  imports: [MdbCarouselModule,RouterModule], 
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
 })
